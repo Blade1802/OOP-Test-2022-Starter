@@ -62,6 +62,7 @@ public class NematodeVisualiser extends PApplet
 
 	public void draw()
 	{
+		stroke(map(count, 0, nematodes.size(), 0, 255), 255, 255);
 		strokeWeight(2);
 		noFill();	
 		int halfW = width/2;
