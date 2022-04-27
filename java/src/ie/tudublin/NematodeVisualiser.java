@@ -8,7 +8,7 @@ import processing.data.TableRow;
 
 public class NematodeVisualiser extends PApplet
 {
-
+	
 	public void keyPressed()
 	{		
 		if (keyCode == LEFT)
