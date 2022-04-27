@@ -21,14 +21,15 @@ public class NematodeVisualiser extends PApplet
 		{
 			background(0);
 			count = --count % nematodes.size();
-			currentNematode = nematodes.get(count);
+			// currentNematode = nematodes.get(count);
 			stroke(map(count, 0, nematodes.size(), 0, 255), 255, 255);
 		}		
 		if (keyCode == RIGHT)
 		{
 			background(0);
 			count = ++count % nematodes.size();
-			currentNematode = nematodes.get(count);
+			// currentNematode = nematodes.get(count);
+			stroke(map(count, 0, nematodes.size(), 0, 255), 255, 255);
 		}
 	}
 
@@ -44,7 +45,8 @@ public class NematodeVisualiser extends PApplet
 		background(0);
 		smooth();
 		loadNematodes();
-		currentNematode = nematodes.get(0);	
+		stroke(255, 0 , 0);
+		// currentNematode = nematodes.get(0);	
 	}
 	
 
@@ -60,13 +62,12 @@ public class NematodeVisualiser extends PApplet
 
 	public void draw()
 	{
-		stroke(255);
 		strokeWeight(2);
 		noFill();	
 		int halfW = width/2;
 		int halfH = height/2;
 		int offset = 0;
-		// currentNematode = nematodes.get(9);
+		currentNematode = nematodes.get(count);
 		point(halfW, halfH);
 		for(int i = 0; i < (currentNematode.getLength() + 1)/2; i++)
 		{
