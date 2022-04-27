@@ -8,6 +8,7 @@ import processing.data.TableRow;
 
 public class NematodeVisualiser extends PApplet
 {
+	ArrayList<Nematode> nematodes = new ArrayList<Nematode>();
 	
 	public void keyPressed()
 	{		
@@ -26,12 +27,20 @@ public class NematodeVisualiser extends PApplet
 	{
 		colorMode(HSB);
 		background(0);
-		smooth();				
+		smooth();
+		loadNematodes();
+					
 	}
 	
 
 	public void loadNematodes()
 	{
+		Table table = loadTable("nematodes.csv", "header");
+        for(TableRow r:table.rows())
+        {
+            Nematode n = new Nematode(r);
+            nematodes.add(n);
+        }
 	}
 
 
