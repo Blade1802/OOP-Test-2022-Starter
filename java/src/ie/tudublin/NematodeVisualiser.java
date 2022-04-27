@@ -1,3 +1,5 @@
+// C20396243 Aayush Gaur
+
 package ie.tudublin;
 
 import java.util.ArrayList;
@@ -103,8 +105,8 @@ public class NematodeVisualiser extends PApplet
 				if(currentNematode.isLimbs())
 				{
 					// Top limbs
-					line(halfW + circleRadius/2, halfH + circleRadius/2 - offset, halfW + circleRadius, halfH + circleRadius/2 - offset);
-					line(halfW - circleRadius/2, halfH + circleRadius/2 - offset, halfW - circleRadius, halfH + circleRadius/2 - offset);
+					line(halfW + circleRadius/2, halfH - circleRadius/2 - offset, halfW + circleRadius, halfH - circleRadius/2 - offset);
+					line(halfW - circleRadius/2, halfH - circleRadius/2 - offset, halfW - circleRadius, halfH - circleRadius/2 - offset);
 					// Bottom limbs
 					line(halfW + circleRadius/2, halfH + circleRadius/2 + offset, halfW + circleRadius, halfH + circleRadius/2 + offset);
 					line(halfW - circleRadius/2, halfH + circleRadius/2 + offset, halfW - circleRadius, halfH + circleRadius/2 + offset);
