@@ -74,6 +74,4 @@ public class Nematode {
         this.eyes = eyes;
     }
 
-    
-
 }
