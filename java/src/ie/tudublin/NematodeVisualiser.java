@@ -97,8 +97,8 @@ public class NematodeVisualiser extends PApplet
 			else
 			{
 				// Segments
-				circle(halfW, halfH + circleRadius/2 - offset, circleRadius);
-				circle(halfW, halfH - circleRadius/2 + offset, circleRadius);
+				circle(halfW, halfH + circleRadius/2 + offset, circleRadius);
+				circle(halfW, halfH - circleRadius/2 - offset, circleRadius);
 
 				if(currentNematode.isLimbs())
 				{
