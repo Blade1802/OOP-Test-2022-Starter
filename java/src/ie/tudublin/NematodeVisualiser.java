@@ -68,7 +68,10 @@ public class NematodeVisualiser extends PApplet
 		int halfH = height/2;
 		int offset = 0;
 		currentNematode = nematodes.get(count);
-		point(halfW, halfH);
+		// point(halfW, halfH);
+		textAlign(CENTER, CENTER);
+        textSize(30);
+        text(currentNematode.getName(), halfW, halfH - currentNematode.getLength() * circleRadius);
 		for(int i = 0; i < (currentNematode.getLength() + 1)/2; i++)
 		{
 			offset = circleRadius * i;
