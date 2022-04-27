@@ -54,7 +54,7 @@ public class NematodeVisualiser extends PApplet
 		int halfW = width/2;
 		int halfH = height/2;
 		int offset = 0;
-		currentNematode = nematodes.get(0);
+		currentNematode = nematodes.get(9);
 		point(halfW, halfH);
 		for(int i = 0; i < (currentNematode.getLength() + 1)/2; i++)
 		{
@@ -100,7 +100,22 @@ public class NematodeVisualiser extends PApplet
 				line(halfW, y, halfW, y + circleRadius/2);
 				y = y + 5 + circleRadius/2;
 				circle(halfW, y, 10);
-
+				break;
+			}
+			case "f":
+			{
+				int y = halfH + (circleRadius/2) * (currentNematode.getLength() - 1);
+				circle(halfW, y, circleRadius/2);
+				break;
+			}
+			case "h":
+			{
+				int y = halfH + (circleRadius/2) * currentNematode.getLength();
+				line(halfW, y, halfW, y + circleRadius/2);
+				y = y + 5 + circleRadius/2;
+				circle(halfW, y, 10);
+				y = halfH + (circleRadius/2) * (currentNematode.getLength() - 1);
+				circle(halfW, y, circleRadius/2);
 			}
 		}
 		
